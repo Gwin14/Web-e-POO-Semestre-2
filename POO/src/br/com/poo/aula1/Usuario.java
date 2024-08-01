@@ -6,12 +6,12 @@ public class Usuario {
     String sobrenome;
     int idade;
 
-    @Override
-    public String toString() {
-        return "Usuario{" +
-                "nome='" + nome + '\'' +
-                ", sobrenome='" + sobrenome + '\'' +
-                ", idade=" + idade +
-                '}';
+    public void MostrarDados() {
+        System.out.println(this.nome);
+        System.out.println(this.sobrenome);
+        System.out.println(this.idade);
+        System.out.println("------------------");
     }
+
+
 }
