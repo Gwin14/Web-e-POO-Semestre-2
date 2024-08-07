@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "tarefa": "Fazer atividade da faculdade",
+    "prioridade": "Média"
+  },
+  {
+    "id": 2,
+    "tarefa": "Ler livro",
+    "prioridade": "Alta"
+  },
+  {
+    "id": 3,
+    "tarefa": "Estudar inglês",
+    "prioridade": "Baixa"
+  },
+  {
+    "id": 4,
+    "tarefa": "Planejar próximos eventos",
+    "prioridade": "Alta"
+  }
+]

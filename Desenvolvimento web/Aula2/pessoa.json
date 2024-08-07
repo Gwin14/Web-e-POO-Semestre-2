@@ -1,0 +1,14 @@
+{
+  "nome": "Fábio",
+  "idade": 19,
+  "status": true,
+  "altura": 1.83,
+  "endereco": {
+    "local": "Pindamonhagaba",
+    "bairro": "Não sei",
+    "estado": "SC",
+    "cidade": "Talvez",
+    "numero": 68
+  },
+  "responsaveis": ["Pai", "Mãe"]
+}

@@ -1,0 +1,22 @@
+[
+  {
+    "nome": "julio",
+    "telefone": 5847568736,
+    "email": "julio@gmail.com",
+    "redesSociais": {
+      "facebook": "julio.facebook",
+      "twitter": "julio.twitter",
+      "instagram": "julio.instagram"
+    }
+  },
+  {
+    "nome": "ana",
+    "telefone": 5897564567,
+    "email": "ana@gmail.com",
+    "redesSociais": {
+      "facebook": "ana.facebook",
+      "twitter": "ana.twitter",
+      "instagram": "ana.instagram"
+    }
+  }
+]
