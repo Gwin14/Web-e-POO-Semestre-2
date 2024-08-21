@@ -1,0 +1,15 @@
+body {
+  animation: pisca 1s steps(3) infinite;
+}
+
+@keyframes pisca {
+  0% {
+    background-color: red;
+  }
+  50% {
+    background-color: yellow;
+  }
+  100% {
+    background-color: green;
+  }
+}
