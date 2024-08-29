@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+  </head>
+  <body>
+    <h1>Cadastro de veículo</h1>
+
+    <form method="post" id="formulario" action="">
+      <label for="input-campo-nome">Nome:</label>
+      <input type="text" name="nome" id="input-campo-nome" required />
+      <hr />
+      <label for="input_opcionais">Opcionais: </label>
+      <br />
+      <input type="checkbox" name="opcionais" id="input_opcionais" />
+      <label>Teto solar</label>
+      <br />
+      <input type="checkbox" name="opcionais" id="input_opcionais" />
+      <label>Banco de couro</label>
+      <br />
+      <input type="checkbox" name="opcionais" id="input_opcionais" />
+      <label>Tração traseira</label>
+      <hr />
+      <label for="modelo">Marca:</label>
+      <br />
+      <label>
+        <input type="radio" name="marca" value="gm" />
+        Chevrolet
+      </label>
+      <br />
+      <label>
+        <input type="radio" name="marca" value="vw" />
+        Volkswagem
+      </label>
+      <br />
+      <label>
+        <input type="radio" name="marca" value="fiat" />
+        Fiat
+      </label>
+      <hr />
+      <label for="desc">Descrição:</label>
+      <br />
+      <textarea name="descricao" id="desc" rows="4"></textarea>
+      <hr />
+      <select name="modelo" id="modelo">
+        <option value="astra">Astra</option>
+        <option value="nivus" selected>Nivus</option>
+        <option value="tcross">T cross</option>
+      </select>
+      <hr />
+      <input type="submit" value="ENVIAR" />
+    </form>
+  </body>
+</html>
