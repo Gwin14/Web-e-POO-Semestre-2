@@ -17,12 +17,38 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <style>
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 100vh;
+        width: 100%;
+      }
+
+      #form-pessoa {
+        width: 50%;
+        border: 2px solid #9b9b9b;
+        padding: 30px;
+        border-radius: 20px;
+      }
+
+      #title {
+        width: 50%;
+      }
+
+      .mb-3 {
+        width: 45%;
+        display: inline-block;
+      }
+    </style>
   </head>
   <body>
     <p class="fs-1" id="title">Cadastro de pessoa</p>
     <form id="form-pessoa">
       <div class="mb-3">
-        <label for="exampleInputname1" class="form-label">Nome</label>
+        <label for="exampleInputname1" class="form-label">Nome*</label>
         <input
           type="text"
           class="form-control"
@@ -32,7 +58,7 @@
         />
       </div>
       <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">Email</label>
+        <label for="exampleInputEmail1" class="form-label">Email*</label>
         <input
           type="text"
           class="form-control"
@@ -42,7 +68,7 @@
         />
       </div>
       <div class="mb-3">
-        <label for="exampleInputtelefone1" class="form-label">Telefone</label>
+        <label for="exampleInputtelefone1" class="form-label">Telefone*</label>
         <input
           type="text"
           class="form-control"
@@ -67,13 +93,19 @@
       </div>
 
       <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-        <button type="button" class="btn btn-outline-secondary" id="btn-cancelar">
+        <button
+          type="button"
+          class="btn btn-outline-secondary"
+          id="btn-cancelar"
+        >
           Cancelar
         </button>
-        <button type="submit" class="btn btn-primary" id="btn-salvar">Salvar</button>
+        <button type="submit" class="btn btn-primary" id="btn-salvar">
+          Salvar
+        </button>
       </div>
     </form>
 
-    <script src="main.js"></script>
+    <script src="form.js"></script>
   </body>
 </html>
