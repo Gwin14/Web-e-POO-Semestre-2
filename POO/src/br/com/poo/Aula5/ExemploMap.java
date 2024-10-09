@@ -15,7 +15,7 @@ public class ExemploMap {
         Map<String, String> mapa = new HashMap<>();
         mapa.put("080.853.323.29", "Fábio");
 
-        for (String nome : lista    ) {
+        for (String nome : lista) {
             System.out.println(nome);
         }
 

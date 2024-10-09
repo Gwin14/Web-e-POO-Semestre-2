@@ -26,16 +26,16 @@ const btnSomar = document.getElementById("btnSomar");
 const resultado = document.getElementById("resultado");
 
 function somar() {
-  const numero1 = parseFloat(elementoInput1.value);
-  const numero2 = parseFloat(elementoInput2.value);
+    const numero1 = parseFloat(elementoInput1.value);
+    const numero2 = parseFloat(elementoInput2.value);
 
-  resultado.textContent = numero1 + numero2;
-  resultado.style.opacity = 1;
-  resultado.style.fontSize = "6em";
+    resultado.textContent = numero1 + numero2;
+    resultado.style.opacity = 1;
+    resultado.style.fontSize = "6em";
 }
 
 function sumir() {
-  const container = document.querySelector(".container");
+    const container = document.querySelector(".container");
 
-  container.style.opacity = 0;
+    container.style.opacity = 0;
 }

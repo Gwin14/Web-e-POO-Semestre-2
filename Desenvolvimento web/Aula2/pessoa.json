@@ -10,5 +10,8 @@
     "cidade": "Talvez",
     "numero": 68
   },
-  "responsaveis": ["Pai", "Mãe"]
+  "responsaveis": [
+    "Pai",
+    "Mãe"
+  ]
 }

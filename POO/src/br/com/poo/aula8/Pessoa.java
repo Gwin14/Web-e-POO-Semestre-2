@@ -7,7 +7,7 @@ public class Pessoa {
     int idade;
     String nome;
 
-    public void fazerAniversario(){
+    public void fazerAniversario() {
         this.idade++;
     }
 }

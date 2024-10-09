@@ -7,24 +7,24 @@ const campoTelefone = document.getElementById("exampleInputtelefone1");
 const campoEndereco = document.getElementById("exampleInputendereco1");
 
 botaoSalvar.addEventListener("click", (event) => {
-  event.preventDefault();
+    event.preventDefault();
 
-  if (
-    campoNome.value === "" ||
-    campoEmail.value === "" ||
-    campoTelefone.value === ""
-  ) {
-    alert("Preencha os dados necessários!");
-  } else {
-    alert("Dados salvos com sucesso!");
-  }
+    if (
+        campoNome.value === "" ||
+        campoEmail.value === "" ||
+        campoTelefone.value === ""
+    ) {
+        alert("Preencha os dados necessários!");
+    } else {
+        alert("Dados salvos com sucesso!");
+    }
 });
 
 botaoCancelar.addEventListener("click", (event) => {
-  event.preventDefault();
+    event.preventDefault();
 
-  campoNome.value = "";
-  campoEmail.value = "";
-  campoTelefone.value = "";
-  campoEndereco.value = "";
+    campoNome.value = "";
+    campoEmail.value = "";
+    campoTelefone.value = "";
+    campoEndereco.value = "";
 });

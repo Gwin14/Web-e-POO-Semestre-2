@@ -11,7 +11,10 @@
       "cidade": "Talvez",
       "numero": 68
     },
-    "responsaveis": ["Pai", "Mãe"]
+    "responsaveis": [
+      "Pai",
+      "Mãe"
+    ]
   },
   {
     "nome": "Isabella",
@@ -25,6 +28,10 @@
       "cidade": "Porto Alegre",
       "numero": 123
     },
-    "responsaveis": ["Pai", "Mãe", "Tia"]
+    "responsaveis": [
+      "Pai",
+      "Mãe",
+      "Tia"
+    ]
   }
 ]
