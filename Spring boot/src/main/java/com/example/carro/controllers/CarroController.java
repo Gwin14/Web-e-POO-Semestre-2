@@ -1,66 +1,48 @@
 package com.example.carro.controllers;
 
 import com.example.carro.entity.Carro;
+import com.example.carro.repository.CarroRepository;
+import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import java.util.Random;
 
 @RestController
 @RequestMapping("/carros")
+@RequiredArgsConstructor
 public class CarroController {
+
+    private final CarroRepository repository;
 
     @GetMapping
     public List<Carro> buscarTodosCarros() {
-
-        List<Carro> carros = new ArrayList<>();
-        carros.add(new Carro(1L, "Ford", "Focus", 2010));
-        carros.add(new Carro(2L, "GM", "Corsa", 2010));
-        carros.add(new Carro(3L, "Fiat", "Uno", 2010));
-
-        return carros;
+        return repository.findAll();
     }
 
     @GetMapping("/{id}")
-    public Carro buscarCarro(@PathVariable(name = "id") Long codigo) {
-        return new Carro(1L, "Ford", "Focus", 2010);
-    }
-
-    @DeleteMapping("/{id}")
-    public String deletarCarro(@PathVariable Long id) {
-        return "Carro " + id + " deletado com sucesso!";
-    }
-
-    @PutMapping("/{id}")
-    public void atualizarCarro(@PathVariable Long id, @RequestBody Carro carro) {
-
-        Carro carroBancoDados = this.buscarCarroBancoDados(id);
-
-        if (carroBancoDados != null) {
-            carroBancoDados.setMarca(carro.getMarca());
-            carroBancoDados.setModelo(carro.getModelo());
-            carroBancoDados.setAnoFabricacao(carro.getAnoFabricacao());
-
-            this.salvarBancoDados(carroBancoDados);
-            System.out.println(carro.toString());
-            System.out.println("Atualizado com sucesso: " + id);
-        }
+    public Optional<Carro> buscarCarro(@PathVariable(name = "id") Long codigo) {
+        return repository.findById(codigo);
     }
 
     @PostMapping
     public Carro salvarNovoCarro(@RequestBody Carro novoCarro) {
-        novoCarro.setId(new Random().nextLong(50));
-
-        return novoCarro;
+        novoCarro.setId(null);
+        return repository.save(novoCarro);
     }
 
-    private void salvarBancoDados(Carro novoCarro) {
-        // Simulação de salvar no banco de dados
-        System.out.println("Carro salvo com sucesso: " + novoCarro.toString());
+    @DeleteMapping("/{id}")
+    public void deletarCarro(@PathVariable Long id) {
+        repository.deleteById(id);
     }
 
-    private Carro buscarCarroBancoDados(Long id) {
-        return new Carro(id, "Ford", "nhe", 2010);
+    @PutMapping("/{id}")
+    public void atualizarCarro(@PathVariable Long id, @RequestBody Carro carro) {
+        carro.setId(id);
+        repository.save(carro);
     }
+
 }
