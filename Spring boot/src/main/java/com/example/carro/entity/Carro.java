@@ -28,4 +28,7 @@ public class Carro {
     @Column(nullable = false, name = "ano_fabricacao")
     private int anoFabricacao;
 
+    @Column(nullable = false)
+    private String cor;
+
 }
