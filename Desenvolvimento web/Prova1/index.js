@@ -26,12 +26,12 @@ fetch("http://localhost:8080/pessoas", {
     data.forEach((pessoa) => {
       tabela.innerHTML += `
       <tr>
-      <td>${pessoa.ativo ? "Sim" : "Não"}</td>
       <td>${pessoa.id}</td>
-        <td>${pessoa.nome}</td>
-        <td>${pessoa.email}</td>
-        <td>${pessoa.telefone}</td>
-        <td>${pessoa.endereco}</td>
+      <td>${pessoa.nome}</td>
+      <td>${pessoa.ativo ? "Sim" : "Não"}</td>
+      <td>${pessoa.email}</td>
+      <td>${pessoa.telefone}</td>
+      <td>${pessoa.endereco}</td>
 
         <td>
           <button class="edit btn btn-primary" onclick="window.location.href='editar.html?id=${
