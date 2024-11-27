@@ -12,7 +12,9 @@ fetch("http://localhost:8080/pessoas", {
     tabela.innerHTML = `
     <thead>
       <tr>
+        <th>ID</th>
         <th>Nome</th>
+        <th>Ativo</th>
         <th>Email</th>
         <th>Telefone</th>
         <th>Endereço</th>
@@ -24,13 +26,20 @@ fetch("http://localhost:8080/pessoas", {
     data.forEach((pessoa) => {
       tabela.innerHTML += `
       <tr>
+      <td>${pessoa.ativo ? "Sim" : "Não"}</td>
+      <td>${pessoa.id}</td>
         <td>${pessoa.nome}</td>
         <td>${pessoa.email}</td>
         <td>${pessoa.telefone}</td>
         <td>${pessoa.endereco}</td>
+
         <td>
-          <button class="edit btn btn-primary" onclick="window.location.href='editar.html?id=${pessoa.id}'"><i class="fas fa-edit fa-1x"></i></button>
-          <button class="delete btn btn-danger" onclick="deletarPessoa(${pessoa.id})"><i class="fas fa-trash fa-1x"></i></button>
+          <button class="edit btn btn-primary" onclick="window.location.href='editar.html?id=${
+            pessoa.id
+          }'"><i class="fas fa-edit fa-1x"></i></button>
+          <button class="delete btn btn-danger" onclick="deletarPessoa(${
+            pessoa.id
+          })"><i class="fas fa-trash fa-1x"></i></button>
         </td>
       </tr>
     `;
